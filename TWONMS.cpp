@@ -2,43 +2,57 @@
 using namespace std; 
  
 int main() {
-	int t,maxn,minn,i,c,d;
-	long a,b,n;
-	
-	
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+    
+	int t,maxn,minn,i;
+	long long a,b, n;
+
+
 	cin>>t;
-	
+
 	while(t > 0)
 	{
 	    t--;
-	    
+
 	    cin>>a>>b>>n;
-	    
-	    for(i = 0; i < n; i++)
-	    {
-	        if(i % 2 == 0)
-	        {
-	            a = a * 2;
-	        }
-	        else
-	        {
-	            b = b * 2;
-	        }
-	    }
-	    	    
+
+	if(n%2 != 0)
+	{
+	    a = a * 2;
+
 	    if(a > b)
 	    {
-	        maxn = a;
-	        minn = b;
+		maxn = a;
+		minn = b;
 	    }
 	    else
 	    {
-	        maxn = b;
-	        minn = a;
+		maxn = b;
+		minn = a;
 	    }
- 
-	    cout<<maxn / minn<<endl;
 	}
-	
+	else
+	{
+	    if(a > b)
+	    {
+		maxn = a;
+		minn = b;
+	    }
+	    else
+	    {
+		maxn = b;
+		minn = a;
+	    }
+	}
+
+	    if(minn == 0)
+	    {
+		cout<<0<<endl;
+		continue;
+	    }
+
+	cout<<maxn / minn<<endl;   
+	}
 	return 0;
-} 
+}
