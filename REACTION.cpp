@@ -36,14 +36,14 @@ int main() {
 	            }
 	            else if((i==0) || (i==(r-1)) || (j==0) || (j==(c-1)))
 	            {
-                    adj_cells = 3;
+                    	adj_cells = 3;
 	            }
 	            else
 	            {
 	                adj_cells = 4;
 	            }
 	            
-	            if(adj_cells < mat[i][j])
+	            if(adj_cells <= mat[i][j])
 	            {
 	                unstable = 1;
 	            }
